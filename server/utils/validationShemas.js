@@ -2,7 +2,7 @@ const yup = require("yup");
 
 const TASK_TEXT_SCHEMA = yup
   .string()
-  .matches(/^[^ ].+$/, "must be valid task string")
+  .matches(/^[^ ]/, "must be valid task string")
   .required();
 
 module.exports.TASK_CREATION_SCHEMA = yup.object().shape({
