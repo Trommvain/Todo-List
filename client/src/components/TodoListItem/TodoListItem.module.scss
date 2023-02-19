@@ -1,0 +1,41 @@
+.todoItem {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 95%;
+    padding: 10px;
+    border: 2px solid rgb(170, 170, 170);
+    background-color: rgb(165, 252, 223);
+    border-radius: 5px;
+    
+    margin-bottom: 10px;
+
+    .input {
+        width: 30px;
+        margin: 0;
+    }
+    
+    %todoTextTemplate {
+        justify-self: flex-start;
+        width: 520px;
+        font-size: 20px;
+        font-style: italic;
+        color: rgb(46, 46, 46);
+        margin: 0 20px 0 0;
+        overflow-x: auto;
+    }
+
+    .todoText {
+        @extend %todoTextTemplate;
+    }
+
+    .todoTextCrossed {
+        @extend %todoTextTemplate;
+        text-decoration: line-through;
+        color: rgb(179, 179, 179);
+    }
+
+    .icon {
+        height: 30px;
+    }
+}

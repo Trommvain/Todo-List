@@ -1,0 +1,6 @@
+{
+  "readFileOpts": {
+    "encoding": "utf-8",
+    "flag": "a+"
+  }
+}

@@ -1,0 +1,73 @@
+.form {
+    display: flex;
+    width: 85%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+%inputTemplate {
+    flex-grow: 5;
+    padding: 0 10px;
+    outline: none;
+    border: 2px solid lightseagreen;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-right: 20px;
+
+    &:focus {
+        border: 2px solid rgb(31, 199, 255);
+        box-shadow: 0 0 15px #9ecaed;
+    }
+
+    &::placeholder {
+        color: rgb(192, 192, 192);
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+.input {
+    @extend %inputTemplate;
+}
+
+.inputError {
+    @extend %inputTemplate;
+    border: 2px solid rgb(255, 0, 0);
+
+    &:focus {
+        border: 2px solid rgb(255, 0, 0);
+        box-shadow: 0 0 15px #f19191;
+    }
+}
+
+.errorMsg {
+    position: absolute;
+    top: 145px;
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    color: red;
+}
+
+.addBtn {
+    flex-grow: 1;
+    background-color: rgb(24, 185, 77);
+    color: whitesmoke;
+    padding: 10px 15px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    user-select: none;
+
+    &:hover {
+        background-color: rgb(19, 138, 59);
+    }
+
+    &:active {
+        background-color: rgb(10, 68, 29);
+    }
+}
